@@ -1,0 +1,15 @@
+<div class="container">
+
+	<h1> Date Picker Popup </h1>
+  <form>
+	<div class="row" [formGroup]="formGroup">
+		<div class="form-group col-sm-6">
+      <label for="activeEndDate">Active End Date</label>
+			<app-date-time-picker formControlName="activeEndDate" name="activeEndDate"></app-date-time-picker>   
+      <div class="text-danger" *ngIf="formGroup.get('activeEndDate').errors?.required">Active End Date is required.</div>
+      <div  class="text-danger" *ngIf="formGroup.get('activeEndDate')?.value && formGroup.get('activeEndDate')?.errors?.isValid">Active End Date must be a valid date.</div>
+     
+		</div>
+	</div>
+</form>
+

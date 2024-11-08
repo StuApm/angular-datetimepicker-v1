@@ -1,0 +1,17 @@
+/* Add application styles & imports to this file! */
+
+@import "~bootstrap/scss/bootstrap";
+
+.ng-invalid {
+  .form-control.ng-invalid ~ .invalid-feedback {
+    display: block
+  }
+
+  .form-group {
+    > .form-control {
+      &.ng-invalid {
+        border-color: $danger;
+      }
+    }
+  }
+}
